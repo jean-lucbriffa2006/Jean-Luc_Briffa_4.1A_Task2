@@ -1,0 +1,44 @@
+/* CSS Reset - Targets Everything */
+/*Removes everything from the html*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Colours From My Style Guide*/
+:root {
+    --Primary: #0748C3;
+    --PrimaryShade: #0003A9;
+    --PrimaryTint: #418BED;
+
+    --Muted: #CED9E8;
+    --Light: #FFFFFF;
+    --Dark: #000000;
+    
+    --Secondary: #CCCCCC;
+    --Secondary-Shade: #A6A6A6;
+    --Secondary-Tint: #E5E5E5;
+
+    --font-normal: Arial, Roboto, sans-serif;
+    --font-heading: 'Noto Serif', serif;
+
+    --space-0: 0;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+body {
+    font-family: var(--font-normal);
+    line-height: 1.5;
+}
