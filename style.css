@@ -50,7 +50,7 @@ body {
 }
 
 .header {
-    background-color: #0748C3;
+    background-color: var(--Primary);
 }
 
 .header-nav {
@@ -72,6 +72,103 @@ body {
   display: block;
 }
 
+/***************** Hero Slider *********************/
+.hero_section {
+    background-color: var(--Primary);
+    height: 460px;
+    width: 100%;
+    position: relative;
+}
+
+.slider_tabs input{
+    visibility: hidden;
+    display: none;
+}
+
+.labels{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.labels label{
+    height: 20px;
+    width: 20px;
+    background-color: var(--Light);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.slider_tabs input:nth-child(1):checked ~ .labels label:nth-child(1),
+.slider_tabs input:nth-child(2):checked ~ .labels label:nth-child(2),
+.slider_tabs input:nth-child(3):checked ~ .labels label:nth-child(3),
+.slider_tabs input:nth-child(4):checked ~ .labels label:nth-child(4){
+    width: 60px;
+    background-color: var(--Muted);
+}
+
+.hero_content{
+    display: flex;
+    width: 300vw;
+    position: relative;
+    transition: all .5s linear;
+}
+
+.hero_content .hero_box{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.hero_content .hero_box:nth-child(1){
+
+}
+
+.hero_content .hero_box:nth-child(2){
+    
+}
+
+.hero_content .hero_box:nth-child(3){
+    
+}
+
+.hero_content .hero_box:nth-child(4){
+    
+}
+
+.slider_tabs input:nth-child(1):checked ~ .hero_content{
+    left: 0vw;
+}
+
+.slider_tabs input:nth-child(2):checked ~ .hero_content{
+    left: -100vw;
+}
+
+.slider_tabs input:nth-child(3):checked ~ .hero_content{
+    left: -200vw;
+}
+
+.slider_tabs input:nth-child(4):checked ~ .hero_content{
+    left: -300vw;
+}
+
+.heading_1{
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px;
+    font-family: var(--font-heading);
+    color: var(--Light);
+}
 
 /*Annoying purple links remover*/
 .link {
