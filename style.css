@@ -57,6 +57,22 @@ body {
     color: #ffffff;
 }
 
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+
 /*Annoying purple links remover*/
 .link {
     color: var(--primary);
