@@ -76,7 +76,7 @@ body {
 .hero_section {
     background-color: var(--Primary);
     height: 460px;
-    width: 100%;
+    width: 1280px;
     position: relative;
 }
 
@@ -115,14 +115,15 @@ body {
 
 .hero_content{
     display: flex;
-    width: 300vw;
+    height: 460px;
+    width: 1280px;
     position: relative;
     transition: all .5s linear;
 }
 
 .hero_content .hero_box{
-    height: 100vh;
-    width: 100vw;
+    height: 460px;
+    width: 1280px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +131,7 @@ body {
 }
 
 .hero_content .hero_box:nth-child(1){
-
+    
 }
 
 .hero_content .hero_box:nth-child(2){
@@ -145,20 +146,20 @@ body {
     
 }
 
-.slider_tabs input:nth-child(1):checked ~ .hero_content{
-    left: 0vw;
+.slider_tabs input:nth-child(1):checked ~ .hero_content{    
+    left: 0px;
 }
 
 .slider_tabs input:nth-child(2):checked ~ .hero_content{
-    left: -100vw;
+    left: -1280px;
 }
 
 .slider_tabs input:nth-child(3):checked ~ .hero_content{
-    left: -200vw;
+    left: -2560px;
 }
 
 .slider_tabs input:nth-child(4):checked ~ .hero_content{
-    left: -300vw;
+    left: -3840px;
 }
 
 .heading_1{
