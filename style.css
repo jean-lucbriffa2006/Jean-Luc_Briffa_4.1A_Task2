@@ -122,7 +122,7 @@ body {
 }
 
 .hero_content .hero_box{
-    height: 460px;
+    height: 520px;
     width: 1280px;
     display: flex;
     align-items: center;
@@ -170,6 +170,31 @@ body {
     font-family: var(--font-heading);
     color: var(--Light);
 }
+
+
+/***************News Section********************/
+.news {}
+
+.news_section {}
+
+.news1 {
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.news1_content {
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+
+.news_text {}
+
+.news_date {}
+
 
 /*Annoying purple links remover*/
 .link {
