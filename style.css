@@ -41,12 +41,15 @@ p {
 body {
     font-family: var(--font-normal);
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 16px;
+  flex: 1;
 }
 
 .header {
@@ -72,12 +75,31 @@ body {
   display: block;
 }
 
+.footer {
+  background-color: var(--Primary);
+  color: var(--Light);
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font: var(--font-normal);
+}
+
+
 /***************** Hero Slider *********************/
 .hero_section {
     background-color: var(--Primary);
     height: 460px;
     width: 1280px;
     position: relative;
+    overflow: hidden;
 }
 
 .slider_tabs input{
@@ -116,34 +138,17 @@ body {
 .hero_content{
     display: flex;
     height: 460px;
-    width: 1280px;
-    position: relative;
+    width: calc(1280px * 4);
+    position: absolute;
+    top: 0;
+    bottom: 0;
     transition: all .5s linear;
 }
 
 .hero_content .hero_box{
-    height: 520px;
+    height: 460px;
     width: 1280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.hero_content .hero_box:nth-child(1){
-    
-}
-
-.hero_content .hero_box:nth-child(2){
-    
-}
-
-.hero_content .hero_box:nth-child(3){
-    
-}
-
-.hero_content .hero_box:nth-child(4){
-    
+    flex-shrink: 0;
 }
 
 .slider_tabs input:nth-child(1):checked ~ .hero_content{    
@@ -173,27 +178,48 @@ body {
 
 
 /***************News Section********************/
-.news {}
+.news {
+    padding: 20px;
+    font-family: var(--font-normal);
+}
 
-.news_section {}
+.news_section {
+    display: flex;
+    gap: 20px;
+}
 
 .news1 {
-    height: 200px;
-    width: 200px;
-    border-style: solid;
+    border: 1px solid var(--Muted);
     border-radius: 20px;
-    display: inline-block;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: var(--Light);
 }
 
 .news1_content {
-    height: 200px;
-    width: 200px;
-    display: inline-block;
+    padding: 10px;
 }
 
-.news_text {}
+.news1_content img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
 
-.news_date {}
+.news_text {
+    margin: 10px 0 5px 0;
+    font-size: 14px;
+}
+
+.news_date {
+    padding-left: var(--space-1);
+    font-size: 12px;
+    color: var(--Muted);
+    background-color: var(--Primary);
+    border-radius: 10px;
+}
+
 
 
 /*Annoying purple links remover*/
