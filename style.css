@@ -46,10 +46,11 @@ body {
 }
 
 .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 16px;
-  flex: 1;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .header {
@@ -92,6 +93,21 @@ body {
   font: var(--font-normal);
 }
 
+/************* For mobile support ***************/
+
+/* Tablet */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+    }
+}
 
 /***************** Hero Slider *********************/
 .hero_section {
@@ -168,7 +184,7 @@ body {
 }
 
 .heading_1{
-    font-size: 2em;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
     padding: 10px;
@@ -186,19 +202,27 @@ body {
 .news_section {
     display: flex;
     gap: 20px;
+    align-items: stretch;
 }
 
 .news1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid var(--Muted);
     border-radius: 20px;
     overflow: hidden;
     width: 250px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     background-color: var(--Light);
+    padding: 10px;
 }
 
 .news1_content {
-    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .news1_content img {
@@ -209,15 +233,17 @@ body {
 
 .news_text {
     margin: 10px 0 5px 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .news_date {
-    padding-left: var(--space-1);
     font-size: 12px;
-    color: var(--Muted);
+    color: var(--Light);
     background-color: var(--Primary);
     border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 
@@ -242,3 +268,126 @@ body {
 .text-dark { color: var(--dark); }
 .text-light { color: var(--light); }
 .text-muted { color: var(--muted); }
+
+
+/********************* How to Apply Page ************************/
+
+.page-title {
+  max-width: 1280px;
+  margin: 32px auto;
+  padding: 16px;
+}
+
+.page-title h1 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+}
+
+.apply-steps {
+  max-width: 800px;
+  margin: 0 auto 48px auto;
+  padding: 32px;
+
+  background-color: var(--Light);
+
+  border: 1px solid var(--Muted);
+  border-radius: 8px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.apply-steps p,
+.apply-steps li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/********************* Part Time Page ************************/
+
+.part_time_section {
+    padding: 40px 20px;
+    font-family: var(--font-normal);
+}
+
+.part_time_section h1 {
+    text-align: center;
+    margin-bottom: var(--space-3);
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.grid_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--Muted);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--Light);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    height: 100%;
+}
+
+.grid_card:hover {
+    transform: translateY(-5px);
+}
+
+.grid_card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.grid_card h2 {
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+}
+
+.grid_card p {
+    font-size: 16px;
+    color: var(--Dark);
+    margin-bottom: 10px;
+}
+
+.buy_button {
+    background-color: var(--Primary);
+    color: var(--Light);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--PrimaryTint) 0.3s ease;
+}
+
+.buy_button:hover {
+    background-color: var(--Muted);
+}
+
+.part_time_price {
+    color: var(--PrimaryTint);
+}
+
+.card_content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/********************* Full Time Page ************************/
+
+.grid_container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
