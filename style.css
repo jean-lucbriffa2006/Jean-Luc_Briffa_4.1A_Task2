@@ -62,35 +62,35 @@ body {
 }
 
 .header-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo-img {
-  height: 100px;
-  width: auto;
-  display: block;
+    height: 100px;
+    width: auto;
+    display: block;
 }
 
 .footer {
-  background-color: var(--Primary);
-  color: var(--Light);
+    background-color: var(--Primary);
+    color: var(--Light);
 }
 
 .footer-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 16px;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
 }
 
 .footer p {
-  margin: 0;
-  font: var(--font-normal);
+    margin: 0;
+    font: var(--font-normal);
 }
 
 /************* For mobile support ***************/
@@ -203,6 +203,7 @@ body {
     display: flex;
     gap: 20px;
     align-items: stretch;
+    margin-bottom: 5%;
 }
 
 .news1 {
@@ -273,33 +274,34 @@ body {
 /********************* How to Apply Page ************************/
 
 .page-title {
-  max-width: 1280px;
-  margin: 32px auto;
-  padding: 16px;
+    max-width: 1280px;
+    margin: 32px auto;
+    padding: 16px;
+    margin-left: 15%;
 }
 
 .page-title h1 {
-  font-family: var(--font-heading);
-  font-size: 20px;
+    font-family: var(--font-heading);
+    font-size: 40px;
 }
 
 .apply-steps {
-  max-width: 800px;
-  margin: 0 auto 48px auto;
-  padding: 32px;
+    max-width: 800px;
+    margin: 0 auto 48px auto;
+    padding: 32px;
 
-  background-color: var(--Light);
+    background-color: var(--Light);
 
-  border: 1px solid var(--Muted);
-  border-radius: 8px;
+    border: 1px solid var(--Muted);
+    border-radius: 8px;
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .apply-steps p,
 .apply-steps li {
-  font-size: 16px;
-  line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /********************* Part Time Page ************************/
@@ -390,4 +392,56 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     align-items: stretch;
+    margin-left: 80px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.open-slider {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--Primary);
+    color: var(--Light);
+    border-radius: 6px;
+    position: absolute;
+    top: 120px;
+    left: 20%;
+    margin-top: 10px;
+}
+
+.fulltime_slider {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--Light);
+    box-shadow: 4px 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: left 0.4s ease;
+    z-index: 1000;
+}
+
+#fulltime-toggle:checked ~ .fulltime_slider {
+    left: 0;
+}
+
+.close-slider {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.fulltime_slider ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fulltime_slider li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--Muted);
+    cursor: pointer;
 }
