@@ -46,11 +46,9 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 1280px;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
     min-height: calc(100vh - 132px - 56px);
 }
 
@@ -204,7 +202,6 @@ body {
     display: flex;
     gap: 20px;
     align-items: stretch;
-    margin-bottom: 5%;
 }
 
 .news1 {
@@ -214,10 +211,16 @@ body {
     border: 1px solid var(--Muted);
     border-radius: 20px;
     overflow: hidden;
-    width: 250px;
+    width: calc((1280px - 60px) / 4);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     background-color: var(--Light);
     padding: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.15);
 }
 
 .news1_content {
@@ -341,6 +344,7 @@ body {
 
 .grid_card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.15);
 }
 
 .grid_card img {
@@ -372,7 +376,7 @@ body {
 }
 
 .buy_button:hover {
-    background-color: var(--Muted);
+    background-color: var(--PrimaryTint);
 }
 
 .part_time_price {
@@ -395,7 +399,6 @@ body {
     align-items: stretch;
     margin-left: 80px;
     margin-top: 5%;
-    margin-bottom: 5%;
 }
 
 .open-slider {
@@ -476,4 +479,36 @@ body {
 
 .contact-form .input-section {
     margin: var(--space-2) 0;
+}
+
+.contact-form button {
+    appearance: none;
+    font-family: var(--font-normal);
+    font-size: 1em;
+
+    background-color: var(--Primary);
+    color: var(--Light);
+
+    border: none;
+    border-radius: 6px;
+
+    padding: var(--space-1) var(--space-2);
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    margin-top: var(--space-2)
+}
+
+.contact-form button:hover {
+    background-color: var(--PrimaryTint);
+}
+
+.contact-form button:active {
+    transform: translateY(1px);
+}
+
+.contact-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
 }
