@@ -28,6 +28,33 @@
     
     <main class="container">
 
+        <form action="information@mcast.edu.mt" method="post" enctype="text/plain" class="contact-form">
+
+        <div class="input-section">
+            <label for="input-name">Name:</label>
+            <input type="text" name="name" id="input-name"
+                placeholder="John Smith" required>
+        </div>
+
+        <div class="input-section">
+            <label for="input-email">Email:</label>
+            <input type="email" name="email" id="input-email"
+                placeholder="me@example.com" required>
+        </div>
+
+        <div class="input-section">
+            <label for="input-message">Message:</label>
+            <textarea name="message" id="input-message"
+                cols="30" rows="10"
+                placeholder="Your message here..."
+                required minlength="20"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-secondary">Clear</button>
+
+    </form>
+
     </main>
 
     <footer class="footer">
